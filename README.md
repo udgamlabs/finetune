@@ -28,6 +28,10 @@ On an Apple Silicon Mac (MPS, fp32, batch 4 with 2-step accumulation), 14 Nov 20
 40/40 exact JSON on the held-out rows (Vemana-Base 34-40/40 across three runs), in 1-2 minutes each. The toy task only
 shows that the recipe trains and that the adapter saves and reloads; it is not a measure of the models themselves.
 
+On a Colab T4 GPU (bf16), 17 Nov 2026, from this repository's notebook: Laghu and Lilavati each 0/20 -> 40/40, in about
+3.5 and 1.5 minutes. Colab's image ships an old torchao that current peft refuses, so the first cell upgrades torchao
+where it is already installed; nothing changes on a Mac or a CPU.
+
 ## Licence
 
 Apache-2.0 for this notebook. Each model keeps its own licence; see its card.
